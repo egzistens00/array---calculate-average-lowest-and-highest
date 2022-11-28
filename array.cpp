@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
 
-	int marks[SIZE], i, min, max, avg, sum = 0, largest = 0, smallest = 0;
+	int marks[SIZE], i, min, max, avg, sum = 0;
 	string sub[] = { "Mathematics", "Chemistry", "Biology", "Physics" };
 	char answer;
 
@@ -33,11 +33,11 @@ int main()
 		cout << "\nThe Average is : " << avg << endl;
 
 		max = 0;
-		for (i = 0; i < SIZE; i++) {
+		for (i = 0; i < SIZE; i++) 
+		{
 			if (marks[max] < marks[i])
 				max = i;
 		}
-		largest = marks[max];
 		cout << "\nThe highest mark is : " << sub[max] << endl;
 
 		min = 0;
@@ -47,7 +47,6 @@ int main()
 
 		}
 
-		smallest = marks[min];
 		cout << "\nThe lowest mark is : " << sub[min] << endl;
 
 		cout << "\nDo you want to continue (Y-yes /N-No):";
